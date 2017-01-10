@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nickp.changemakerproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nickp.changemakerproject.MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.Cam" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.mapbox.AccessToken"
+            android:value="pk.eyJ1Ijoibmlja3BlbHRpZXIiLCJhIjoiY2l4cm5icHFnMGJpMjMzbzYwOTZldnR3NSJ9.6e2FQNVQ3Jq28Y4SqjR65Q" />
+        <meta-data
+            android:name="com.mapbox.TestEventsServer"
+            android:value="https://cloudfront-staging.tilestream.net" />
+        <meta-data
+            android:name="com.mapbox.TestEventsAccessToken"
+            android:value="" />
+
+        <service android:name="com.mapbox.mapboxsdk.telemetry.TelemetryService" />
+    </application>
+
+</manifest>
