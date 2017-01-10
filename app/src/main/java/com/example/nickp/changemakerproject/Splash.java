@@ -3,6 +3,7 @@ package com.example.nickp.changemakerproject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 /**
  * Created by nickp on 1/10/2017.
@@ -15,6 +16,9 @@ public class Splash extends Activity
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
+
+        ImageView img = (ImageView)findViewById(R.id.imageView2);
+        img.setImageResource(R.drawable.seg);
 
         Thread timerThread = new Thread()
         {
